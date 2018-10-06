@@ -54,12 +54,6 @@ function is_palindrome(s) {
   let reverseStack = new stackClass;
   s = s.toLowerCase().replace(/[^a-zA-Z0-9]/g, "");
   twoStack(s);
-  // if (forwardStack ===  reverseStack) {
-  //   return true;
-  // } else {
-  //   return false;
-  // }
-
   function twoStack(str) {
    
     // base case 
@@ -72,10 +66,7 @@ function is_palindrome(s) {
 
     //console.log('forwardStack: ', JSON.stringify(forwardStack));
     reverseStack.push(str[str.length-1])
-
-
     twoStack(str.slice(1, str.length-1));
-
   }
   if (forwardStack.data == reverseStack.data) {
     return true;
